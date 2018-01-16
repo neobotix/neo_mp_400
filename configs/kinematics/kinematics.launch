@@ -3,7 +3,7 @@
 	<arg name="sendTF" default="true"/>
         <param if="$(arg sendTF)" name="kinematics_differential/sendTransform" value="true"/>
         <param unless="$(arg sendTF)" name="kinematics_differential/sendTransform" value="false"/>
-        <rosparam command="load" ns="kinematics_differential" file="$(find neo_mp_400)/configs/kinematics/$(env ROBOT)_kinematics.yaml"/>
+        <rosparam command="load" ns="kinematics_differential" file="$(find neo_mp_400)/configs/kinematics/kinematics.yaml"/>
         <node pkg="neo_kinematics_differential" type="neo_kinematics_differential_node" name="neo_kinematics_differential_node" ns="kinematics_differential" respawn="false" output="screen">
 	</node>
 </launch>

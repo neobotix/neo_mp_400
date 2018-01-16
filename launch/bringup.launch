@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<launch>
+
+                <!-----robot platform----->
+
+                <!---relayboard V2--->
+                <include file="$(find neo_mp_400)/configs/relayboard_v2/relayboard_v2.launch"/>
+
+                <!---kinematics--->
+                <include file="$(find neo_mp_400)/configs/kinematics/kinematics.launch"/>
+
+
+                <!-----sensors----->
+
+                <!--single s300 at the front-->
+                <!--include file="$(find neo_mp_400)/configs/sick/sick_s300_front.launch"/-->
+
+                <!--s300 at the front and back-->
+                <include file="$(find neo_mp_400)/configs/sick/sick_s300_front_back.launch"/>
+
+                <!--laser scan unifier-->
+                <!--only if two or more laserscanner are available on your robot-->
+                <include file="$(find neo_mp_400)/configs/scan_unifier/cob_scan_unifier.launch"/>
+
+                <!-----teleoperation----->
+
+                <!---neobotix basic joystick node--->
+                <include file="$(find neo_mp_400)/configs/teleop/teleop.launch"/>
+
+                <!-----robot model----->
+
+                <param name="robot_description" command="$(find xacro)/xacro.py '$(find neo_mp_400)/robot_model/mp_400/mp_400.urdf.xacro'" />
+                <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+                        <param name="use_gui" value="false" />
+                </node>
+                <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+</launch>
