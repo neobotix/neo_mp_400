@@ -199,5 +199,36 @@
 			</geometry>
 	  	</collision>
 	</link>
+
+
+        <!--+++++++++++++++++++laserscanner_back_joint++++++++++++++++++++++++-->
+        <joint name="laserscanner_back_joint" type="fixed">
+                  <axis xyz="0 1 0" />
+                  <origin xyz="-0.354 0 0.110" rpy="3.14 0 3.14" />
+                  <parent link="base_link"/>
+                  <child link="laserscanner_back_link"/>
+        </joint>
+
+        <!--+++++++++++++++++++laserscanner_back_link++++++++++++++++++++++++-->
+        <link name="laserscanner_back_link" type="laser">
+                <inertial>
+                        <mass value="0.001" />
+                        <origin xyz="0 0 0" rpy="0 0 0" />
+                        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001" />
+                </inertial>
+                <visual>
+                        <origin xyz="0 0 0" rpy="0 0 -1.57" />
+                        <geometry>
+                                <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-S300.STL" />
+                        </geometry>
+                        <material name="Neobotix/Yellow" />
+                </visual>
+                <collision>
+                        <origin xyz="0 0 0" rpy="0 0 0" />
+                        <geometry>
+                        <cylinder length="0.154" radius="0.053" />
+                        </geometry>
+                </collision>
+        </link>
     
 </robot>

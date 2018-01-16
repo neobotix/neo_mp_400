@@ -26,7 +26,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: FrontLaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -63,6 +63,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        laserscanner_back_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         laserscanner_front_link:
           Alpha: 1
           Show Axes: false
@@ -94,20 +99,20 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz/LaserScan
       Color: 255; 255; 255
-      Color Transformer: ""
+      Color Transformer: Intensity
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
-      Max Intensity: 4096
+      Max Intensity: 8192
       Min Color: 0; 0; 0
       Min Intensity: 0
       Name: FrontLaserScan
-      Position Transformer: ""
+      Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.01
+      Size (m): 0.05
       Style: Flat Squares
       Topic: /sick_s300_front/scan_filtered
       Unreliable: false
@@ -137,7 +142,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.01
+      Size (m): 0.05
       Style: Flat Squares
       Topic: /sick_s300_back/scan_filtered
       Unreliable: false
@@ -168,22 +173,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.87526
+      Distance: 2.62137
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.0587227
-        Y: 0.444812
-        Z: 0.384832
+        X: 0.275737
+        Y: 0.137645
+        Z: 0.318981
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.175399
+      Pitch: 0.265399
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.0204107
+      Yaw: 0.155411
     Saved: ~
 Window Geometry:
   Displays:
@@ -202,4 +207,4 @@ Window Geometry:
     collapsed: true
   Width: 1200
   X: 55
-  Y: 50
+  Y: 40
