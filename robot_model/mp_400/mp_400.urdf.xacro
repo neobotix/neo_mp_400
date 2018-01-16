@@ -59,7 +59,7 @@
 	    	<!--cylinder length="0.381" radius="0.2545"/-->
 	    	<!--box size="0.445 0.277 0.17"/-->
         </geometry>
-        <material name="Neobotix/Yellow" />
+        <material name="Neobotix/Grey" />
       </visual>
       <collision name='body_collision'>
         <origin xyz="0.0 0.0 0.234" rpy="0 0 0" />
