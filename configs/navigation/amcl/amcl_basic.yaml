@@ -132,7 +132,7 @@
 
 #######ODOMETRY MODEL PARAMETRS####### 
 
- odom_model_type : omni-corrected
+ odom_model_type : diff-corrected
 
     #####Which model to use, either "diff", "omni", "diff-corrected" or "omni-corrected". 
 

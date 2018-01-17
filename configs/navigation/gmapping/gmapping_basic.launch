@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <launch>
 
- <arg name="joystick" value="true"/>
+ <arg name="joystick" value="false"/>
   
   <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen">
     <remap from="scan" to="cob_scan_unifier/scan_unified"/>
-    <rosparam file="$(find neo_mpo_500)/config/navigation/gmapping/gmapping_config.yaml" command="load" />
+    <rosparam file="$(find neo_mp_400)/config/navigation/gmapping/gmapping_basic.yaml" command="load" />
   </node>
 
  <!-- Launch robot control-->
  <group if="$(arg joystick)">
  
- <include file="$(find neo_mpo_500)/config/teleop/mpo_500_teleop.launch"/>
+ <include file="$(find neo_mp_400)/config/teleop/teleop.launch"/>
 
  </group>
 
