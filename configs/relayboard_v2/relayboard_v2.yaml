@@ -75,7 +75,7 @@ drive2:
   homing_active: false
   EncIncrPerRevMot: 4096
   VelMeasFrqHz: 1
-  GearRatio: 25
+  GearRatio: 8
   BeltRatio: 1
   Sign: 1.0
   VelMaxEncIncrS: 300000
@@ -90,9 +90,9 @@ drive3:
   homing_active: false
   EncIncrPerRevMot: 4096
   VelMeasFrqHz: 1
-  GearRatio: 25
+  GearRatio: 8
   BeltRatio: 1
-  Sign: -1.0
+  Sign: 1.0
   VelMaxEncIncrS: 300000
   VelPModeEncIncrS: 10
   AccIncrS2: 500000
