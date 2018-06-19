@@ -30,7 +30,7 @@ If you have any questions, just get in touch with us:
 
 Hardware connection: ![neo_relayboard_v2](https://github.com/neobotix/neo_relayboard_v2)
 
-Kinematic: ![neo_mecanum_kinematics](https://github.com/neobotix/neo_kinematics_mecanum)
+Kinematic: ![neo_kinematics_differential](https://github.com/neobotix/neo_kinematics_differential)
 
 Laserscanner: ![cob_sick_s300](https://github.com/neobotix/neo_driver)
 
@@ -68,16 +68,13 @@ AMCL: [amcl](http://wiki.ros.org/amcl)
 
 ### ROSlaunch files:
 
-Bringup: ![bringup.launch](https://github.com/neobotix/neo_mp_400/blob/indigo/launch/mp_400/bringup.launch)
+Bringup: ![bringup.launch](https://github.com/neobotix/neo_mp_400/blob/master/launch/bringup.launch)
 
-Navigation with SLAM: ![navigation_basic_slam.launch](https://github.com/neobotix/neo_mp_400/blob/indigo/launch/mp_400/navigation_basic_slam.launch)
+Navigation with SLAM: ![navigation_basic_slam.launch](https://github.com/neobotix/neo_mp_400/blob/master/launch/navigation_basic_slam.launch)
 
-Navigation with AMCL: ![navigation_basic_amcl.launch](https://github.com/neobotix/neo_mp_400/blob/indigo/launch/mp_400/navigation_basic_amcl.launch)
+Navigation with AMCL: ![navigation_basic_amcl.launch](https://github.com/neobotix/neo_mp_400/blob/master/launch/navigation_basic_amcl.launch)
 
 
 ### Configuration:
 
 For each used ROS-Node there is a Folder in configs
-
-
-
