@@ -4,7 +4,7 @@ This package contains configuration and launch files for Neobotix MP-400.
 
 ![Neobotix MP-400](http://www.neobotix-roboter.de/fileadmin/files/produkte/Basisplattformen/MP-400/Roboter-MP-400-Hauptansicht.jpg)
 
-The [MP-400](http://www.neobotix-robots.com/mecanum-robot-mp-400.html) is a small and effective mobile robot specialized for logistics.
+The [MP-400](http://www.neobotix-robots.com/mecanum-robot-mp-400.html) is a small, agile mobile robot for material flow and intralogistics in industrial applications. Automatic charging station and load handling system available.
 
 # Contact information
 
