@@ -14,14 +14,14 @@
                 <!--sensors-->
 
                 <!--single s300 at the front-->
-                <!--include file="$(find neo_mp_400)/configs/sick/sick_s300_front.launch"/-->
+                <include file="$(find neo_mp_400)/configs/sick/sick_s300_front.launch"/>
 
                 <!--s300 at the front and back-->
-                <include file="$(find neo_mp_400)/configs/sick/sick_s300_front_back.launch"/>
+                <!--include file="$(find neo_mp_400)/configs/sick/sick_s300_front_back.launch"/-->
 
                 <!--laser scan unifier-->
                 <!--only if two or more laserscanner are available on your robot-->
-                <include file="$(find neo_mp_400)/configs/scan_unifier/cob_scan_unifier.launch"/>
+                <!--include file="$(find neo_mp_400)/configs/scan_unifier/cob_scan_unifier.launch"/-->
 
                 <!--teleoperation-->
 
