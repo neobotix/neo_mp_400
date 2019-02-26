@@ -2,18 +2,18 @@
 <!-- Materials -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mp_400">
     
-<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_gazebo.xacro" />
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/mp_400_gazebo.xacro" />
 
 <!--++++++++++++++++++++++++++++++base_link++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
 <!--++++++++++++++++++++body++++++++++++++++++++++++++++--> 
 
-<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_body.xacro" />
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/mp_400_body.xacro" />
 
 <!--+++++++++++++++++++castor_wheel_link++++++++++++++++++++++++--> 
-<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_caster_wheel.xacro" />
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/mp_400_caster_wheel.xacro" />
 
 <!--+++++++++++++++++++left_wheel_link++++++++++++++++++++++++--> 
-<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_fixed_wheel.xacro" />
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/mp_400_fixed_wheel.xacro" />
 
   <xacro:mp_400_base name="base_link">
   </xacro:mp_400_base>
@@ -46,7 +46,7 @@
 
   <!--+++++++++++++++++++laserscanner_link++++++++++++++++++++++++-->
    <!-- SENSORS --> 
-  <xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/sick_laser.xacro" />
+  <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/sick_laser.xacro" />
   <xacro:sick_laser_v0 name="laserscanner_1" parent="base_link" ros_topic="sick/scan">
     <origin xyz="0.230 0 0.110" rpy="0 3.14 3.14" />
   </xacro:sick_laser_v0>

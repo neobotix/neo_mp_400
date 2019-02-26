@@ -13,7 +13,7 @@
       <visual name='body'>
       <origin xyz="0.0 0.0 0." rpy="0 0 1.57" />
         <geometry>
-            <mesh filename="package://neo_simulation/robots/mp_400/meshes/MP-400-BODY.dae" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/MP-400-BODY.dae" scale="0.001 0.001 0.001"/>
         <!--cylinder length="0.381" radius="0.2545"/-->
         <!--box size="0.445 0.277 0.17"/-->
         </geometry>
@@ -21,7 +21,7 @@
       <collision name='body_collision'>
         <origin xyz="0.0 0.0 0.0" rpy="0 0 1.57" />
         <geometry>
-          <mesh filename="package://neo_simulation/robots/mp_400/meshes/MP-400-BODY.dae" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/MP-400-BODY.dae" scale="0.001 0.001 0.001"/>
           <!--cylinder length="0.381" radius="0.2545"/-->
         </geometry>
       </collision>
