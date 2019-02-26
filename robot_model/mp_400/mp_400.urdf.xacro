@@ -2,233 +2,53 @@
 <!-- Materials -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mp_400">
     
-	<material name="Neobotix/Black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
-    </material>
-
-    <material name="Neobotix/Blue">
-        <color rgba="0.0 0.0 0.8 1.0"/>
-    </material>
-
-    <material name="Neobotix/Green">
-        <color rgba="0.0 0.8 0.0 1.0"/>
-    </material>
-
-    <material name="Neobotix/Grey">
-        <color rgba="0.7 0.7 0.7 1.0"/>
-    </material>
-
-    <material name="Neobotix/Grey2">
-        <color rgba="0.9 0.9 0.9 1.0"/>
-    </material>
-
-    <material name="Neobotix/Red">
-        <color rgba="0.8 0.0 0.0 1.0"/>
-    </material>
-
-    <material name="Neobotix/White">
-        <color rgba="1.0 1.0 1.0 1.0"/>
-    </material>
-    
-    <material name="Neobotix/Yellow">
-        <color rgba="1.0 1.0 0 10" />
-    </material>
+<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_gazebo.xacro" />
 
 <!--++++++++++++++++++++++++++++++base_link++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
 <!--++++++++++++++++++++body++++++++++++++++++++++++++++--> 
-	<link name="base_link">
-      <!--inertial>
-        <mass value="67.010" />
-        <origin xyz="0.0 0.0 0.234" rpy="0 0 0"/>
-        <inertia ixx="1417853.715" ixy="17813.155" ixz="-21078.206"
-                 iyy="2030191.708" iyz="-4813.295" 
-                 izz="2180211.662" />
-      </inertial-->
-	  <inertial>
-		  <mass value="5.67" />
-		    <origin xyz="0 0 0.0" rpy="0 0 0"/>
-		    <inertia ixx="0.07" ixy="0.0" ixz="0.0"
-		             iyy="0.08" iyz="0.0" 
-		             izz="0.1" />
-	  </inertial>
-      <visual name='body'>
-        <!--origin xyz="0.0 0.0 0.234" rpy="0 0 1.57" /--><!-- for cylinder -->
-		<origin xyz="0.0 0.0 0.0" rpy="0 0 1.57" /><!-- for STL -->
-        <geometry>
-            <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/MP-400-BODY.STL" scale="0.001 0.001 0.001"/>
-	    	<!--cylinder length="0.381" radius="0.2545"/-->
-	    	<!--box size="0.445 0.277 0.17"/-->
-        </geometry>
-        <material name="Neobotix/Grey" />
-      </visual>
-      <collision name='body_collision'>
-        <origin xyz="0.0 0.0 0.234" rpy="0 0 0" />
-        <geometry>
-          <!--box size="0.445 0.277 0.17"/-->
-          <cylinder length="0.381" radius="0.2545"/>
-        </geometry>
-      </collision>
-<!--+++++++++++++++++++castor_front++++++++++++++++++++++++--> 
-	<visual name='castor_front_visual'>
-          <origin xyz="0.2 0 0.018" rpy="0 0 0" />
-          <geometry>
-            <sphere radius="0.016"/>
-          </geometry>
-          <material name="Neobotix/Black" />
-      </visual>
-      <collision name='castor_front_collision'>
-	  	<origin xyz="0.2 0 0.018 " rpy="0 0 0" />
-          <geometry>
-            <sphere radius="0.016"/>
-          </geometry>
-    </collision>
-<!--+++++++++++++++++++castor_back++++++++++++++++++++++++--> 
-	<visual name='castor_back_visual'>
-          <origin xyz="-0.2 0 0.018" rpy="0 0 0" />
-          <geometry>
-            <sphere radius="0.016"/>
-          </geometry>
-          <material name="Neobotix/Black" />
-      </visual>
-      <collision name='castor_back_collision'>
-	  	<origin xyz="-0.2 0 0.018 " rpy="0 0 0" />
-          <!--pose>0.3 0 -0.12 0 -0 0</pose-->
-          <geometry>
-            <sphere radius="0.016"/>
-          </geometry>
-       </collision>
-    </link>
 
-<!--+++++++++++++++++++wheel_left_link++++++++++++++++++++++++--> 
-<link name="wheel_left_link" type="wheel">
-    <inertial>
-      <mass value="1.5" />
-      <origin xyz="0.0 0.0 -0.016" rpy="0 0 0" />
-      <inertia ixx="0.0051" ixy="0" ixz="0" iyy="0.0051" iyz="0" izz="0.009" />
-    </inertial>
+<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_body.xacro" />
 
-    <visual>
-     	<origin xyz="0.0 0.0 -0.016" rpy="0 0 0" />
-     	<geometry>
-        	<!--mesh filename="package://neo_robot_descriptions/mp_400/meshes/MP-400-WHEEL.STL" scale="0.001 0.001 0.001"/-->
-			<cylinder radius="0.075" length="0.03"/>
-     	</geometry>
-     	<material name="Neobotix/Black" />
-    </visual>
+<!--+++++++++++++++++++castor_wheel_link++++++++++++++++++++++++--> 
+<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_caster_wheel.xacro" />
 
-    <collision>
-     	<origin xyz="0.0 0.0 -0.016" rpy="0 0 0" />
-     	<geometry>
-        	<cylinder radius="0.075" length="0.03"/>
-     	</geometry>
-    </collision>
-</link>
+<!--+++++++++++++++++++left_wheel_link++++++++++++++++++++++++--> 
+<xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/mp_400_fixed_wheel.xacro" />
 
-<!--+++++++++++++++++++wheel_left_joint++++++++++++++++++++++++--> 
-	<joint name="wheel_left_joint" type="revolute">
-		<origin xyz="0 -0.2645 0.075" rpy="0 1.57 1.57" />
-    	<axis xyz="0 0 1"/>
-    	<limit effort="1000.0" lower="-1e+16" upper="1e+16" velocity="3.5"/>
-    	<joint_properties damping="0.0" friction="0.0" />
-    	<parent link="base_link" />
-    	<child link="wheel_left_link" />
-    </joint>
+  <xacro:mp_400_base name="base_link">
+  </xacro:mp_400_base>
 
-	<!--+++++++++++++++++++wheel_right_link++++++++++++++++++++++++--> 
-	<link name="wheel_right_link" type="wheel">
-		<inertial>
-		  <mass value="1.5" />
-		  <origin xyz="0 0.0 0.016" rpy="0 0 0" />
-		  <inertia ixx="0.0051" ixy="0" ixz="0" iyy="0.0051" iyz="0" izz="0.009" />
-		</inertial>
+  <!-- Wheel Macro -->
+  <xacro:caster_wheel name="wheel_front_left" parent="base_link">
+    <origin xyz="0.165 0.155 0.036" rpy="0 0 1.57" />
+  </xacro:caster_wheel>
 
-		<visual>
-		 	<origin xyz="0 0.0 0.016" rpy="0 0 0" />
-		 	<geometry>
-		    	<!--mesh filename="package://neo_robot_descriptions/mp_400/meshes/MP-400-WHEEL.STL" scale="0.001 0.001 0.001"/-->
-				<cylinder radius="0.075" length="0.03"/>
-		 	</geometry>
-		 	<material name="Neobotix/Black" />
-		</visual>
+  <xacro:caster_wheel name="wheel_back_left" parent="base_link">
+    <origin xyz="-0.220 0.155 0.036" rpy="0 0 1.57" />
+  </xacro:caster_wheel>
 
-		<collision>
-		 	<origin xyz="0.0 0.0 0.016" rpy="0 0 0" />
-		 	<geometry>
-		    	<cylinder radius="0.075" length="0.03"/>
-		 	</geometry>
-		</collision>
-	</link>
+  <xacro:caster_wheel name="wheel_front_right" parent="base_link">
+    <origin xyz="0.165 -0.155 0.036" rpy="0 0 1.57" />
+  </xacro:caster_wheel>
 
-	<!--+++++++++++++++++++wheel_right_joint++++++++++++++++++++++++--> 
-	<joint name="wheel_right_joint" type="revolute">
-    	<origin xyz="0 0.2645 0.075" rpy="0 1.57 1.57" />
-    	<axis xyz="0 0 1"/>
-    	<limit effort="1000.0" lower="-1e+16" upper="1e+16" velocity="3.5"/>
-    	<joint_properties damping="0.0" friction="0.0" />
-    	<parent link="base_link" />
-    	<child link="wheel_right_link" />
-    </joint>
+   <xacro:caster_wheel name="wheel_back_right" parent="base_link">
+    <origin xyz="-0.220 -0.155 0.036" rpy="0 0 1.57" />
+  </xacro:caster_wheel>
+
+  <xacro:fixed_wheel name="fixed_wheel_right" parent="base_link">
+    <origin xyz="0. -0.26 0.075" rpy="0 0 -1.57" />
+  </xacro:fixed_wheel>
+
+  <xacro:fixed_wheel name="fixed_wheel_left" parent="base_link">
+    <origin xyz="-0. 0.26 0.075" rpy="0 0 1.57" />
+  </xacro:fixed_wheel>
 
 
-	<!--+++++++++++++++++++laserscanner_front_joint++++++++++++++++++++++++--> 
-	<joint name="laserscanner_front_joint" type="fixed">
-		  <axis xyz="0 1 0" />
-		  <origin xyz="0.230 0 0.110" rpy="3.14 0 0" />
-		  <parent link="base_link"/>
-		  <child link="laserscanner_front_link"/>
-	</joint>
-
-	<!--+++++++++++++++++++laserscanner_front_link++++++++++++++++++++++++-->
-	<link name="laserscanner_front_link" type="laser">
-		<inertial>
-			<mass value="0.001" />
-			<origin xyz="0 0 0" rpy="0 0 0" />
-			<inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001" />
-	  	</inertial>
-	  	<visual>
-			<origin xyz="0 0 0" rpy="0 0 -1.57" />
-			<geometry>
-		  		<mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-S300.STL" />
-			</geometry>
-			<material name="Neobotix/Yellow" />
-	  	</visual>
-	  	<collision>
-			<origin xyz="0 0 0" rpy="0 0 0" />
-			<geometry>
-		  	<cylinder length="0.154" radius="0.053" />
-			</geometry>
-	  	</collision>
-	</link>
-
-
-        <!--+++++++++++++++++++laserscanner_back_joint++++++++++++++++++++++++-->
-        <joint name="laserscanner_back_joint" type="fixed">
-                  <axis xyz="0 1 0" />
-                  <origin xyz="-0.354 0 0.110" rpy="3.14 0 3.14" />
-                  <parent link="base_link"/>
-                  <child link="laserscanner_back_link"/>
-        </joint>
-
-        <!--+++++++++++++++++++laserscanner_back_link++++++++++++++++++++++++-->
-        <link name="laserscanner_back_link" type="laser">
-                <inertial>
-                        <mass value="0.001" />
-                        <origin xyz="0 0 0" rpy="0 0 0" />
-                        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001" />
-                </inertial>
-                <visual>
-                        <origin xyz="0 0 0" rpy="0 0 -1.57" />
-                        <geometry>
-                                <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-S300.STL" />
-                        </geometry>
-                        <material name="Neobotix/Yellow" />
-                </visual>
-                <collision>
-                        <origin xyz="0 0 0" rpy="0 0 0" />
-                        <geometry>
-                        <cylinder length="0.154" radius="0.053" />
-                        </geometry>
-                </collision>
-        </link>
+  <!--+++++++++++++++++++laserscanner_link++++++++++++++++++++++++-->
+   <!-- SENSORS --> 
+  <xacro:include filename="$(find neo_simulation)/robots/mp_400/xacros/sick_laser.xacro" />
+  <xacro:sick_laser_v0 name="laserscanner_1" parent="base_link" ros_topic="sick/scan">
+    <origin xyz="0.230 0 0.110" rpy="0 3.14 3.14" />
+  </xacro:sick_laser_v0>
     
 </robot>
