@@ -49,19 +49,19 @@
   #stt : 0.2
   #Odometry error in rotation as a function of rotation (theta/theta) 
 
-  linearUpdate : 0.5
+  linearUpdate : 0.1
   #Process a scan each time the robot translates this far 
 
-  angularUpdate : 0.5
+  angularUpdate : 0.05
   #Process a scan each time the robot rotates this far 
 
-  temporalUpdate : -1.0
+  temporalUpdate : 2.0
   #Process a scan if the last scan processed is older than the update time in seconds. A value less than zero will turn time based updates off. 
 
   #resampleThreshold : 0.5
   #The Neff based resampling threshold 
 
-  particles : 50
+  particles : 200
   #Number of particles in the filter. Particles changed from default value 30 to 80. 
 
   #xmin : -100.0
