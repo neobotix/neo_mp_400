@@ -3,7 +3,7 @@
 <!-- front laserscanner   -->
 
 	<!-- parameters -->
-	<arg name="name_front" default="sick_s300_front" />
+	<arg name="name_front" default="laser_1" />
         <rosparam command="load" ns="$(arg name_front)" file="$(find neo_mp_400)/configs/sick/s300_front.yaml"/>
 	<!-- start node -->
 	<node pkg="cob_sick_s300" type="cob_sick_s300" name="$(arg name_front)" respawn="false" output="screen" >
