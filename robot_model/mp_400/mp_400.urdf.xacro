@@ -23,7 +23,7 @@
 <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/sick_S300.xacro" /> -->
 
 <!-- Microscan - Comment/Uncomment if required -->
- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/urdf//micro_scan.xacro" />
+ <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/micro_scan.xacro" />
 
 <!-- USS and IMU - Comment/Uncomment if required  -->
 <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/imu.xacro" />
