@@ -10,8 +10,7 @@
 #            device configuration              #
 ################################################
 port: /dev/neo-relayboard
-message_timeout: 2.0
-request_rate: 25
+request_rate: 50
 
 #################################################
 #                 battery                       #
