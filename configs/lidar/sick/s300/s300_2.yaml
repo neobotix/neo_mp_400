@@ -1,4 +1,7 @@
 port: /dev/neo-s300-2
 baud: 500000
+scan_cycle_time: 0.080
+scan_duration: 0.050
+scan_delay: 0.030
 frame_id: lidar_2_link
 scan_intervals: [[-1.66, 1.66]] #[rad] these intervals are included to the scan +-95°
