@@ -15,12 +15,6 @@ NeoLocalPlanner:
   # The minimum x velocity for the robot in m/s, negative for backwards motion.
   min_vel_x : -0.1
 
-  # The minimum y velocity for the robot in m/s
-  min_vel_y : -0.5
-
-  # The maximum y velocity for the robot in m/s
-  max_vel_y : 0.5
-
   # The absolute value of the maximum rotational velocity for the robot in rad/s
   max_rot_vel : 1
 
@@ -37,7 +31,7 @@ NeoLocalPlanner:
   yaw_goal_tolerance : 0.02
 
   # The tolerance in meters for the controller in the x & y distance when achieving a goal
-  xy_goal_tolerance : 0.1
+  xy_goal_tolerance : 0.05
 
   # How far to predict control pose into the future based on latest odometry [s]
   lookahead_time : 0.2
@@ -63,8 +57,11 @@ NeoLocalPlanner:
   # Gain for adjusting yaw when not translating, or in case of holonomic drive  [1/s]
   static_yaw_gain : 3
 
-  # Max velocity based on yawrate (default = min_trans_vel * max_rot_vel) [m*rad/s^2]
-  max_curve_vel : 0.15
+  # Max velocity based on curvature [rad/s]
+  max_curve_vel : 0.2
+
+  # Max distance to goal when looking for it [m]
+  max_goal_dist : 0.2
 
   # Max distance allowable for backing up (zero = unlimited) [m]
   max_backup_dist : 0.1
