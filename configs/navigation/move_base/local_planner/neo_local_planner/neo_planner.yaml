@@ -1,10 +1,7 @@
 NeoLocalPlanner:
 
   # The x acceleration limit of the robot in meters/sec^2
-  acc_lim_x : 0.5
-
-  # The y acceleration limit of the robot in meters/sec^2
-  acc_lim_y : 0.5
+  acc_lim_x : 0.25
 
   # The rotational acceleration limit of the robot in radians/sec^2
   acc_lim_theta : 1
@@ -31,19 +28,19 @@ NeoLocalPlanner:
   yaw_goal_tolerance : 0.02
 
   # The tolerance in meters for the controller in the x & y distance when achieving a goal
-  xy_goal_tolerance : 0.05
+  xy_goal_tolerance : 0.1
 
   # How far to predict control pose into the future based on latest odometry [s]
-  lookahead_time : 0.2
+  lookahead_time : 0.3
 
   # How far to look ahead when computing path orientation (or looking for goal) [m]
   lookahead_dist : 0.5
 
   # Maximum y error for lane keeping, below we adjust velocity, above we stop and rotate [m]
-  max_y_error : 0.2
+  max_y_error : 1
 
   # Maximum yaw error for lane keeping, below we adjust velocity, above we stop and rotate [rad]
-  max_yaw_error : 1
+  max_yaw_error : 1.6
 
   # Gain when adjusting final x position for goal [1/s]
   pos_x_gain : 1
@@ -57,14 +54,26 @@ NeoLocalPlanner:
   # Gain for adjusting yaw when not translating, or in case of holonomic drive  [1/s]
   static_yaw_gain : 3
 
+  # Gain for y cost avoidance (differential only)
+  cost_y_yaw_gain : 0.2
+
+  # Gain for yaw cost avoidance
+  cost_yaw_gain : 2
+
+  # Max cost to allow, above we slow down to min_trans_vel or even stop
+  max_cost : 0.9
+
   # Max velocity based on curvature [rad/s]
-  max_curve_vel : 0.2
+  max_curve_vel : 0.4
 
   # Max distance to goal when looking for it [m]
-  max_goal_dist : 0.2
+  max_goal_dist : 0.5
 
   # Max distance allowable for backing up (zero = unlimited) [m]
   max_backup_dist : 0.1
+
+  # Minimal distance for stopping [m]
+  min_stop_dist : 0.2
 
   # If robot has differential drive, holonomic otherwise
   differential_drive : true
