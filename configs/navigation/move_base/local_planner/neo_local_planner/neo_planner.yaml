@@ -28,7 +28,10 @@ NeoLocalPlanner:
   yaw_goal_tolerance : 0.01
 
   # The tolerance in meters for the controller in the x & y distance when achieving a goal
-  xy_goal_tolerance : 0.1
+  xy_goal_tolerance : 0.05
+
+  # How long to fine tune for goal position after reaching tolerance limits [s]
+  goal_tune_time : 0.5
 
   # How far to predict control pose into the future based on latest odometry [s]
   lookahead_time : 0.3
