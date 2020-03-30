@@ -15,5 +15,5 @@ smooth_factor: 0.2
 # button on the controller wich has to be pushed while driving
 deadman_button: 5
 
-# timeout to stop robot if no command is recived for X seconds [s]
+# timeout after which to stop robot if no command is received [s]
 joy_timeout: 1
