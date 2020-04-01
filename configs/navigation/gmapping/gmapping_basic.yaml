@@ -4,7 +4,7 @@
 
   odom_frame : "odom"
 
-  map_update_interval   : 1.0
+  map_update_interval : 1.0
   # How long (in seconds) between updates to the map. Lowering this number updates the occupancy grid more often, at the expense of greater computational load.
 
   maxUrange : 10
@@ -52,17 +52,17 @@
   linearUpdate : 0.1
   #Process a scan each time the robot translates this far 
 
-  angularUpdate : 0.05
+  angularUpdate : 0.1
   #Process a scan each time the robot rotates this far 
 
-  temporalUpdate : 2.0
+  temporalUpdate : 0.5
   #Process a scan if the last scan processed is older than the update time in seconds. A value less than zero will turn time based updates off. 
 
-  resampleThreshold : 0.2
+  resampleThreshold : 0.5
   #The Neff based resampling threshold 
 
-  particles : 50
-  #Number of particles in the filter. Particles changed from default value 30 to 80. 
+  particles : 100
+  #Number of particles in the filter.
 
   xmin : -20.0
   #Initial map size 
@@ -79,16 +79,16 @@
   delta : 0.03
   #Resolution of the map.
 
-  llsamplerange : 0.02
+  #llsamplerange : 0.01
   #Translational sampling range for the likelihood 
 
-  llsamplestep : 0.02
+  #llsamplestep : 0.01
   #Translational sampling step for the likelihood 
 
-  lasamplerange : 0.01
+  #lasamplerange : 0.005
   #Angular sampling range for the likelihood 
 
-  lasamplestep : 0.01
+  #lasamplestep : 0.005
   #Angular sampling step for the likelihood 
 
   transform_publish_period : 0.05
