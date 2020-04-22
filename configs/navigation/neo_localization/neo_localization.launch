@@ -9,12 +9,12 @@
   </node>
 
   <!-- Localization Node -->
-  <node pkg="neo_localization" type="neo_localization_node" name="neo_localization_node">
+  <node pkg="neo_localization" type="neo_localization_node" name="neo_localization_node" output="screen">
 
     <remap from="/scan" to="/lidar_1/scan_filtered" />
 
     <rosparam file="$(find neo_mp_400)/configs/navigation/neo_localization/neo_localization.yaml" command="load" />
 
- </node>
+  </node>
 
 </launch>
