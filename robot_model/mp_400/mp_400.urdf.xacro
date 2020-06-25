@@ -20,11 +20,14 @@
 <!-- SENSORS --> 
 <!-- Sick S300 - Comment/Uncomment if required  -->
 
-<!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/sick_S300.xacro" /> -->
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/sick_S300.xacro" />
 
 <!-- Microscan - Comment/Uncomment if required -->
- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/micro_scan.xacro" />
+ <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/micro_scan.xacro" /> -->
 
+<!-- Nanoscan - Comment/Uncomment if required -->
+ <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/nano_scan.xacro" /> -->
+ 
 <!-- USS and IMU - Comment/Uncomment if required  -->
 <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/imu.xacro" />
 <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/ultrasonic.xacro" /> -->
@@ -63,7 +66,7 @@
 
 
   <!--+++++++++++++++++++laserscanner_link++++++++++++++++++++++++-->
-
+<!-- S300, NanoScan and Microscan -->
   <xacro:sick_laser_v0 name="lidar_1" parent="base_link" ros_topic="lidar_1/scan_filtered">
     <origin xyz="0.230 0 0.110" rpy="0 3.14 3.14" />
   </xacro:sick_laser_v0>
