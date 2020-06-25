@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- parameters -->
+	<arg name="name_1" default="lidar_1" />
+        <rosparam command="load" ns="$(arg name_1)" file="$(find neo_mp_400)/configs/lidar/sick/nanoScan3/nanoscan3.yaml"/>
+	<!-- start node -->
+	<node pkg="sick_safetyscanners" type="sick_safetyscanners_node" name="$(arg name_1)" output="screen" >
+		<remap from="scan" to="/lidar_1/scan_filtered"/>
+	</node>
+
+</launch>
