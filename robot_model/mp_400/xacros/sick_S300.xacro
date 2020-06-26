@@ -16,13 +16,13 @@
       <visual>
         <origin xyz="0 0 -0.11" rpy="-1.57 0 3.14" />
         <geometry>
-        <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-MICROSCAN3.dae" scale="0.001 0.001 0.001" />
+        <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-S300.dae" scale="0.001 0.001 0.001" />
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 -0.11" rpy="-1.57 0 3.14" />
         <geometry>
-        <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-MICROSCAN3.dae" scale="0.001 0.001 0.001" />
+        <mesh filename="package://neo_mp_400/robot_model/mp_400/meshes/SICK-S300.dae" scale="0.001 0.001 0.001" />
         </geometry>
       </collision>
     </link>
