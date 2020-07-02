@@ -13,11 +13,11 @@
 <!-- Back right laserscanner   -->
 
 	<!-- parameters -->
-	<arg name="name_2" default="lidar_2" />
-        <rosparam command="load" ns="$(arg name_2)" file="$(find neo_mp_400)/configs/lidar/sick/microscan3/microscan3_2.yaml"/>
+	<!--arg name="name_2" default="lidar_2" />
+        <rosparam command="load" ns="$(arg name_2)" file="$(find neo_mp_400)/configs/lidar/sick/microscan3/microscan3_2.yaml"/-->
 	<!-- start node -->
-	<node pkg="sick_safetyscanners" type="sick_safetyscanners_node" name="$(arg name_2)" output="screen" >
+	<!--node pkg="sick_safetyscanners" type="sick_safetyscanners_node" name="$(arg name_2)" output="screen" >
 		<remap from="scan" to="/lidar_2/scan_filtered"/>
-	</node>
+	</node-->
 
 </launch>

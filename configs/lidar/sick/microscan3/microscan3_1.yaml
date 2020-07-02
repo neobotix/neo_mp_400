@@ -18,10 +18,10 @@ skip: 0
 #For a 25Hz laser, setting 'skip' to 0 makes it publish at 25Hz, 
 #'skip' to 1 makes it publish at 12.5Hz.
 
-angle_start: 0.0
+angle_start: -1.48
 #Start angle of scan in radians, if both start and end angle are equal, all angels are regarded
 
-angle_end: 0.0
+angle_end: 1.48
 #End angle of scan in radians, if both start and end angle are equal, all angels are regarded
 
 channel_enabled: true
