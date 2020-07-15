@@ -55,7 +55,7 @@ NeoLocalPlanner:
   static_yaw_gain : 3
 
   # Gain for y cost avoidance (differential only)
-  cost_y_yaw_gain : 0.2
+  cost_y_yaw_gain : 0.3
 
   # How far ahead to compute y cost gradient (constant offset) [m]
   cost_y_lookahead_dist : 0.3
