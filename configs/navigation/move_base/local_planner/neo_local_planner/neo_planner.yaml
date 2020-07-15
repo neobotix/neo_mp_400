@@ -61,7 +61,7 @@ NeoLocalPlanner:
   cost_y_lookahead_dist : 0.3
 
   # How far ahead to compute y cost gradient (dynamic offset) [s]
-  cost_y_lookahead_time : 1
+  cost_y_lookahead_time : 1.5
 
   # Gain for yaw cost avoidance
   cost_yaw_gain : 2
@@ -82,7 +82,7 @@ NeoLocalPlanner:
   max_backup_dist : 0.1
 
   # Minimal distance for stopping [m]
-  min_stop_dist : 0.2
+  min_stop_dist : 0.3
 
   # If robot has differential drive, holonomic otherwise
   differential_drive : true
