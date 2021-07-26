@@ -32,7 +32,10 @@
 <!-- <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/imu.xacro" />
 <xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/ultrasonic.xacro" /> -->
 
-  <link name="base_link" />
+<!-- Igus -->
+<xacro:include filename="$(find neo_mp_400)/robot_model/mp_400/xacros/igus_5DOF_SV.xacro" />
+
+<link name="base_link" />
 
 <!-- Base link macro -->
  <xacro:mp_400_base name="base_footprint" parent="base_link">
@@ -41,19 +44,19 @@
 
   <!-- Wheel Macro -->
   <xacro:caster_wheel name="mp_400_wheel_front_left" parent="base_footprint">
-    <origin xyz="0.165 0.155 0.036" rpy="0 0 1.57" />
+    <origin xyz="0.164 0.158 0.036" rpy="0 0 1.57" />
   </xacro:caster_wheel>
 
   <xacro:caster_wheel name="mp_400_wheel_back_left" parent="base_footprint">
-    <origin xyz="-0.220 0.155 0.036" rpy="0 0 1.57" />
+    <origin xyz="-0.319 0.158 0.036" rpy="0 0 1.57" />
   </xacro:caster_wheel>
 
   <xacro:caster_wheel name="mp_400_wheel_front_right" parent="base_footprint">
-    <origin xyz="0.165 -0.155 0.036" rpy="0 0 1.57" />
+    <origin xyz="0.164 -0.158 0.036" rpy="0 0 1.57" />
   </xacro:caster_wheel>
 
    <xacro:caster_wheel name="mp_400_wheel_back_right" parent="base_footprint">
-    <origin xyz="-0.220 -0.155 0.036" rpy="0 0 1.57" />
+    <origin xyz="-0.319 -0.158 0.036" rpy="0 0 1.57" />
   </xacro:caster_wheel>
 
   <xacro:wheel_right name="mp_400_wheel_right" parent="base_footprint">
@@ -70,6 +73,11 @@
   <xacro:sick_laser_v0 name="lidar_1" parent="base_link" ros_topic="lidar_1/scan_filtered">
     <origin xyz="0.230 0 0.110" rpy="0 3.14 3.14" />
   </xacro:sick_laser_v0>
+
+<!-- Igus -->
+<xacro:igus_5DOF_SV parent="base_link" prefix="igus">
+    <origin xyz="0 0 0." rpy="0 0 3.14" />
+  </xacro:igus_5DOF_SV> 
 
      <!--+++++++++++++++++++ IMU ++++++++++++++++++++++++-->
  <!-- Comment or uncomment based on your requirement -->
