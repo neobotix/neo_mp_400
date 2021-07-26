@@ -5,8 +5,8 @@ axis_linear_y: 0
 axis_angular_z: 2
 
 # maximum velocities [rad/s, m/s, m/s]
-scale_angular_z: 0.8
-scale_linear_x: 0.6
+scale_angular_z: 0.2
+scale_linear_x: 0.3
 scale_linear_y: 0
 
 # low pass filter gain (1 = no filtering)

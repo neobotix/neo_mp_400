@@ -1,31 +1,31 @@
 NeoLocalPlanner:
 
   # The x acceleration limit of the robot in meters/sec^2
-  acc_lim_x : 0.25
+  acc_lim_x : 0.1
 
   # The rotational acceleration limit of the robot in radians/sec^2
-  acc_lim_theta : 0.8
+  acc_lim_theta : 0.3
 
   # The maximum x velocity for the robot in m/s.
-  max_vel_x : 0.8
+  max_vel_x : 0.3
 
   # The minimum x velocity for the robot in m/s, negative for backwards motion.
   min_vel_x : -0.1
 
   # The absolute value of the maximum rotational velocity for the robot in rad/s
-  max_rot_vel : 0.8
+  max_rot_vel : 0.3
 
   # The absolute value of the minimum rotational velocity for the robot in rad/s
   min_rot_vel : 0.1
 
   # The absolute value of the maximum translational velocity for the robot in m/s
-  max_trans_vel : 0.8
+  max_trans_vel : 0.3
 
   # The absolute value of the minimum translational velocity for the robot in m/s
   min_trans_vel : 0.1
 
   # The tolerance in radians for the controller in yaw/rotation when achieving its goal
-  yaw_goal_tolerance : 0.01
+  yaw_goal_tolerance : 0.05
 
   # The tolerance in meters for the controller in the x & y distance when achieving a goal
   xy_goal_tolerance : 0.1

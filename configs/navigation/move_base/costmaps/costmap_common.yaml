@@ -1,4 +1,4 @@
-footprint: [[0.30,0.30],[-0.30,0.30],[-0.30,-0.30],[0.30,-0.30]]
+footprint: [[0.7,0.35],[-0.5,0.35],[-0.5,-0.35],[0.7,-0.35]]
 
 inflation_layer:
   inflation_radius: 0.8
@@ -7,6 +7,5 @@ inflation_layer:
 observation_sources: laser_1
 
 laser_1: {sensor_frame: lidar_1_link , data_type: LaserScan, topic: lidar_1/scan_filtered, marking: true, clearing: true, obstacle_range: 5.0, raytrace_range: 8.0}
-
 
 
