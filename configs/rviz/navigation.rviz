@@ -22,6 +22,8 @@ Panels:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: cpr_rviz/RobotPanel
+    Name: RobotPanel
   - Class: rviz/Time
     Experimental: false
     Name: Time
