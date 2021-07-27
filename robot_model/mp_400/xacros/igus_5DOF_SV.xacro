@@ -10,7 +10,7 @@
       <limit effort="30" velocity="1.0" />
     </joint>
 
-    <joint name="arm_joint" type="prismatic">
+    <joint name="arm_joint" type="fixed">
       <parent link="linear_link" />
       <child link = "igus_base_link" />
       <origin xyz="0.0 -0.148 0.0" rpy="3.14 0 1.57" />

@@ -21,12 +21,14 @@
                 <!--neobotix basic joystick node-->
                 <include file="$(find neo_mp_400)/configs/teleop/teleop.launch"/>
 
+                                <!--CPR robot-->
+                                <param name="robot_type" value="igus_5DOF_SV"/>
+                                <node name="igus_5DOF_SV" pkg="cpr_robot" type="igus_5DOF_SV"/>
+
                 <!--robot model-->
 
                 <param name="robot_description" command="$(find xacro)/xacro '$(find neo_mp_400)/robot_model/mp_400/mp_400.urdf.xacro'" />
-                <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
-                        <param name="use_gui" value="false" />
-                </node>
+
                 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
 </launch>
