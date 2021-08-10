@@ -21,9 +21,13 @@
                 <!--neobotix basic joystick node-->
                 <include file="$(find neo_mp_400)/configs/teleop/teleop.launch"/>
 
+                                <rosparam command="load" file="$(find cpr_robot)/igus_5DOF_SV.yaml" />
+
+                                <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn controller" respawn="false" output="screen"/>
+
                                 <!--CPR robot-->
-                                <param name="robot_type" value="igus_5DOF_SV"/>
-                                <node name="igus_5DOF_SV" pkg="cpr_robot" type="igus_5DOF_SV"/>
+                <param name="robot_type" value="igus_5DOF_SV"/>
+                <node name="igus_5DOF_SV" pkg="cpr_robot" type="igus_5DOF_SV" output="screen"/>
 
                 <!--robot model-->
 
