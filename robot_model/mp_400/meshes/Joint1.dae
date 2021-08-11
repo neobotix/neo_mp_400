@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.83.16 commit date:2021-06-15, commit time:08:46, hash:051567553d29</authoring_tool>
     </contributor>
-    <created>2021-08-10T17:28:17</created>
-    <modified>2021-08-10T17:28:17</modified>
+    <created>2021-08-10T19:15:35</created>
+    <modified>2021-08-10T19:15:35</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -716,7 +716,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="RL-DP5_Achse_2_Simplified_003" name="RL-DP5 Achse 2 Simplified.003" type="NODE">
-        <matrix sid="transform">-1 8.74228e-8 -1.50996e-7 -25 -1.50996e-7 4.37114e-8 1 0 8.74228e-8 1 -4.37114e-8 132 0 0 0 1</matrix>
+        <matrix sid="transform">-1 8.74228e-8 -1.50996e-7 -10 -1.50996e-7 4.37114e-8 1 0 8.74228e-8 1 -4.37114e-8 132 0 0 0 1</matrix>
         <instance_geometry url="#RL-DP5_Achse_2_Simplified_002-mesh" name="RL-DP5 Achse 2 Simplified.003">
           <bind_material>
             <technique_common>
